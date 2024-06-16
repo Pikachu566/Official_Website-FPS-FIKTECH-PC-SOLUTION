@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Red Lion</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container img {
+      width: 100px;
+      height: auto;
+      display: block;
+    }
+
+    .text {
+      margin-top: 10px;
+    }
+	
+
+    .text h1 {
+      color: red;
+      font-size: 1.5em;
+      margin: 10px 0;
+    }
+
+    .text p {
+      color: yellow;
+      font-size: 1.1em;
+      margin: 10px 0;
+    }
+
+    @media (max-width: 600px) {
+      .text h1, .text p {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1 style="color: red;">YOUR WEBSITE</h1>
+    <img src="redlion.png" alt="Centered Image">
+    <div class="text">
+	  <p style="color: yellow;">REDLION</p>
+      <h1>They underestimate me in the real world,</h1>
+      <h1>but they don't know I'm in "Cyber World".</h1>
+      <p>Mereka memandang rendah saya di dunia nyata,</p>
+      <p>tetapi mereka tidak mengenali saya dalam "Dunia Siber".</p>
+	  <p></p>
+    </div>
+  </div>
+</body>
+
+</html>
