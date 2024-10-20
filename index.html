@@ -11,8 +11,6 @@
             padding: 0;
             background-color: #f9f9f9;
         }
-
-        /* Header */
         header {
             background-color: #4CAF50;
             padding: 20px;
@@ -20,25 +18,19 @@
             color: white;
             box-shadow: 0 2px 10px rgba(0,0,0,0.2);
         }
-
         header h1 {
             margin: 0;
             font-size: 3em;
         }
-
-        /* Main Container */
         .container {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center; /* Center content horizontally */
+            justify-content: center;
             align-items: flex-start;
-            width: 100%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
-
-        /* Product Card */
         .product {
             background-color: white;
             width: 100%;
@@ -49,36 +41,30 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
-
-        /* Product Image */
         .product img {
             width: 100%;
             height: auto;
             max-width: 300px;
-            margin: auto;
             border-radius: 10px;
         }
-
-        /* Product Details */
-        .product-details h3 {
-            color: #333;
-            margin-top: 15px;
+        .product-title, .product-price {
+            margin: 15px 0;
             font-size: 1.5em;
         }
-
+        .product-price {
+            font-size: 2em;
+            color: #333;
+        }
         .product-details ul {
             list-style-type: none;
             padding: 0;
             color: #777;
-            margin: 10px 0;
+            text-align: left;
         }
-
         .product-details ul li {
             margin: 5px 0;
             font-size: 1em;
         }
-
-        /* WhatsApp Link */
         .whatsapp-link {
             display: inline-block;
             margin-top: 10px;
@@ -90,173 +76,166 @@
             border-radius: 5px;
             transition: background-color 0.3s ease;
         }
-
         .whatsapp-link:hover {
             background-color: #1ebe57;
-        }
-
-        /* Responsiveness */
-        @media (max-width: 768px) {
-            .product {
-                max-width: 100%;
-                padding: 15px;
-            }
-
-            header h1 {
-                font-size: 2em;
-            }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>FPS FIKTECH PC SOLUTION</h1>
+<header>
+    <h1>FPS FIKTECH PC SOLUTION</h1>
+</header>
+
+    <ul class="info-list">
         <li>1. Untuk Penghantaran COD Kawasan Utara Extra Charge Mengikut Kilometer.</li>
         <li>2. Harga Yang Ditetapkan Adalah Harga Walk In.</li>
         <li>3. Setiap Pesanan Mengambil Masa 7 Hingga 10 Hari Waktu Bekerja.</li>
-        <li>4. Lokasi Berhampiran Ban Pecah Tanjung Piandang, Perak, Malaysia</li>
-        <li>5. Harga PC Sahaja "Tidak Termasuk Monitor/Mouse/Keyboard/Headphone.</li>
-    </header>
+        <li>4. Lokasi Berhampiran Ban Pecah Tanjung Piandang, Perak, Malaysia.</li>
+        <li>5. Harga PC Sahaja "Tidak Termasuk Monitor/Mouse/Keyboard/Headphone."</li>
+    </ul>
 
-    <div class="container">
-        <!-- Product 1 -->
-        <div class="product">
-            <img src="RM1999.jpg" alt="Product 1">
-            <div class="product-details">
-                <h3>PAKEJ 1</h3>
-                <h2>RM1999</h2>
-                <ul>
-                    <li>AMD RYZEN 5 5500 6C/12T</li>
-                    <li>MSI A520M-A PRO</li>
-                    <li>MSI GTX 1650 G6 VENTUS XS OCV3 4GB GDDR6</li>
-                    <li>16GB PNY XLR8 EPIC-X (16x1) 3200Mhz</li>
-                    <li>500GB NVMe M.2 2280 NVMe Gen3x4 SSD</li>
-                    <li>👉🏻[1ST PLAYER BS-2 M-ATX (3x F2 ARGB FAN + HUB) BLACK]👈🏻</li>
-                    <li>1ST PLAYER BLACK SIR 500W PRO 80 PLUS WHITE</li>
-                    <li>Windows 11 (TRIAL - NOT FULL VERSION)</li>
-                    <li>FREE : USB WIRELESS ADAPTER 2.4G</li>
-                </ul>
-                <a class="whatsapp-link" href="https://wa.me/175298421?text=Saya%20tertarik%20dengan%20Pakej%201">Pakej RM1999 WhatsApp</a>
-            </div>
+<div class="container">
+    <!-- Products Array -->
+    <div class="product">
+        <h3 class="product-title">PAKEJ 1</h3>
+        <img src="RM1999.jpg" alt="Product 1">
+        <h2 class="product-price">RM1999</h2>
+        <div class="product-details">
+            <ul>
+                <li>1. AMD RYZEN 5 5500 6C/12T</li>
+                <li>2. MSI A520M-A PRO</li>
+                <li>3. MSI GTX 1650 G6 VENTUS XS OCV3 4GB GDDR6</li>
+                <li>4. 16GB PNY XLR8 EPIC-X (16x1) 3200Mhz</li>
+                <li>5. 500GB NVMe M.2 2280 NVMe Gen3x4</li>
+                <li>6. 1ST PLAYER BS-2 M-ATX (3xF2 ARGB FAN+HUB)</li>
+                <li>7. 1ST PLAYER BLACK SIR 500W PRO 80 PLUS WHITE</li>
+                <li>8. FREE : USB WIRELESS ADAPTER 2.4G</li>
+            </ul>
         </div>
-
-         <!-- Product 2 -->
-        <div class="product">
-            <img src="RM2199.jpg" alt="Product 2">
-            <div class="product-details">
-                <h3>PAKEJ 2</h3>
-				<h2>RM2199</h2>
-                <ul>
-                    <li>AMD RYZEN 5 5500 6C/12T</li>
-                    <li>MSI A520M-A PRO</li>
-                    <li>MSI RTX 3050 VENTUS 2X 6GB OC</li>
-                    <li>16GB PNY XLR8 EPIC-X DDR4 3200Mhz (16GB X 1) 3200MHz RGB</li>
-                    <li>500GB M.2 2280 NVMe Gen3x4 SSD</li>
-                    <li>👉🏻[1ST PLAYER BS-2 M-ATX (3x F2 ARGB FAN + HUB) BLACK]👈🏻</li>
-                    <li>1ST PLAYER BLACK SIR 500W PRO 80 PLUS WHITE</li>
-                    <li>FREE : USB WIRELESS ADAPTER 2.4G</li>
-                </ul>
-                <a class="whatsapp-link" href="https://wa.me/175298421?text=Saya%20tertarik%20dengan%20Pakej%202">Pakej RM2199 WhatsApp</a>
-            </div>
-        </div>
-
-        <!-- Product 3 -->
-        <div class="product">
-            <img src="RM2799.jpg" alt="Product 3">
-            <div class="product-details">
-                <h3>PAKEJ 3</h3>
-				<h2>RM2799</h2>
-                <ul>
-                    <li>AMD RYZEN 5 5500 6C/12T</li>
-                    <li>MSI A520M-A PRO</li>
-                    <li>MSI RTX 4060 VENTUS 2X BLACK 8GB</li>
-                    <li>16GB PNY XLR8 EPIC-X DDR4 3200Mhz (16GB X 1) 3200MHz RGB</li>
-                    <li>500GB M.2 2280 NVMe Gen3x4 SSD</li>
-                    <li>1ST PLAYER T3 M-ATX (4x F2 ARGB FAN + HUB) BLACK</li>
-                    <li>1ST PLAYER DK PREMIUM 600W 80 PLUS BRONZE NON MODULAR</li>
-                    <li>FREE : USB WIRELESS ADAPTER 2.4G</li>
-                </ul>
-                <a class="whatsapp-link" href="https://wa.me/175298421?text=Saya%20tertarik%20dengan%20Pakej%203">Pakej RM2799 WhatsApp</a>
-            </div>
-        </div>
-
-        <!-- Product 4 -->
-        <div class="product">
-            <img src="RM3099.jpg" alt="Product 4">
-            <div class="product-details">
-                <h3>Pakej 4</h3>
-				<h2>RM3099</h2>
-                <ul>
-                    <li>AMD RYZEN 5 5600 6C/12T</li>
-                    <li>MSI B550M A PRO</li>
-                    <li>MSI RTX 4060 VENTUS 2X BLACK 8GB</li>
-                    <li>16GB PNY XLR8 EPIC-X DDR4 3200Mhz (16GB X 1) 3200MHz RGB</li>
-                    <li>500GB MSI SPATIUM M450 M.2 2280 NVMe PCIe Gen4 SSD</li>
-                    <li>1ST PLAYER T3 M-ATX (4x F2 ARGB FAN + HUB) BLACK</li>
-                    <li>1ST PLAYER DK PREMIUM 600W 80 PLUS BRONZE NON MODULAR</li>
-                    <li>Windows 11 (TRIAL - NOT FULL VERSION)</li>
-                </ul>
-                <a class="whatsapp-link" href="https://wa.me/175298421?text=Saya%20tertarik%20dengan%20Pakej%204">Pakej RM3099 WhatsApp</a>
-            </div>
-        </div>
-
-        <!-- Product 5 -->
-        <div class="product">
-            <img src="RM3299.jpg" alt="Product 5">
-            <div class="product-details">
-                <h3>Pakej 5</h3>
-				<h2>RM3299</h2>
-                <ul>
-                    <li>AMD RYZEN 5 5600 6C/12T</li>
-                    <li>MSI B550M A PRO VDH WIFI</li>
-                    <li>MSI RTX 4060 VENTUS 2X BLACK 8GB</li>
-                    <li>16GB PNY XLR8 EPIC-X DDR4 3200Mhz (8GB X 2) 3200MHz RGB</li>
-                    <li>500GB MSI SPATIUM M450 M.2 2280 NVMe PCIe Gen4 SSD</li>
-                    <li>MSI MAG FORGE M100R MICRO ATX TOWER CASING(4x ARGB FAN+HUB)</li>
-                    <li>MSI MAG A650BN 650W 80 PLUS BRONZE NON MODULAR</li>
-                    <li>Windows 11 (TRIAL - NOT FULL VERSION)</li>
-                </ul>
-                <a class="whatsapp-link" href="https://wa.me/175298421?text=Saya%20tertarik%20dengan%20Pakej%205">Pakej RM3299 WhatsApp</a>
-            </div>
-        </div>
-
-        <!-- Product 6 -->
-        <div class="product">
-            <img src="RM3799.jpg" alt="Product 6">
-            <div class="product-details">
-                <h3>Pakej 6</h3>
-				<h2>RM3799</h2>
-                <ul>
-                    <li>RYZEN 7 5700X	8C/16T</li>
-                    <li>MSI B550M MORTAR MAX WIFI</li>
-                    <li>MSI RTX 4060 VENTUS 2X BLACK 8GB</li>
-                    <li>16GB PNY XLR8 EPIC-X DDR4 3200Mhz (8GB X 2) 3200MHz RGB</li>
-                    <li>1TB MSI SPATIUM M460 M.2 2280 NVMe PCIe Gen4 SSD</li>
-                    <li>MSI MAG FORGE M100R MICRO ATX TOWER CASING(4x ARGB FAN+HUB)</li>
-                    <li>MSI MAG A650BN 650W 80 PLUS BRONZE NON MODULAR</li>
-                    <li>Windows 11 (TRIAL - NOT FULL VERSION)</li>
-                </ul>
-                <a class="whatsapp-link" href="https://wa.me/175298421?text=Saya%20tertarik%20dengan%20Pakej%206">Pakej RM3799 WhatsApp</a>
-            </div>
-        </div>
-
-        <!-- Product 7 -->
-        <div class="product">
-            <img src="IMG20240130000903.jpg" alt="Product 7">
-            <div class="product-details">
-                <h3>Pakej 7</h3>
-				<h2>CUSTOM PC</h2>
-                <ul>
-                    <li>Nak Custom Macam Rojak</li>
-					<li>Beli Barang Sendiri Upah Pasang Dan Program Pun Boleh</li>
-                </ul>
-                <a class="whatsapp-link" href="https://wa.me/175298421?text=Saya%20tertarik%20dengan%20Pakej%07">Nak Custom Spec WhatsApp</a>
-            </div>
-        </div>
-
-
+        <a class="whatsapp-link" href="https://wa.me/175298421?text=Saya%20tertarik%20dengan%20Pakej%201">Pakej RM1999 WhatsApp</a>
     </div>
+
+    <!-- Product 2 -->
+    <div class="product">
+        <h3 class="product-title">PAKEJ 2</h3>
+        <img src="RM2199.jpg" alt="Product 2">
+        <h2 class="product-price">RM2199</h2>
+        <div class="product-details">
+            <ul>
+                <li>1. AMD RYZEN 5 5500 6C/12T</li>
+                <li>2. MSI A520M-A PRO</li>
+                <li>3. MSI RTX 3050 VENTUS 2X 6GB OC</li>
+                <li>4. 16GB PNY XLR8 EPIC-X DDR4 (16GBX1) 3200MHz</li>
+                <li>5. 500GB M.2 2280 NVMe Gen3x4</li>
+                <li>6. 1ST PLAYER BS-2 M-ATX (3xF2 ARGB FAN+HUB)</li>
+                <li>7. 1ST PLAYER BLACK SIR 500W PRO 80 PLUS WHITE</li>
+                <li>8. FREE : USB WIRELESS ADAPTER 2.4G</li>
+            </ul>
+        </div>
+        <a class="whatsapp-link" href="https://wa.me/175298421?text=Saya%20tertarik%20dengan%20Pakej%202">Pakej RM2199 WhatsApp</a>
+    </div>
+
+    <!-- Repeat for Products 3 to 7 in the same format -->
+    <!-- Product 3 -->
+    <div class="product">
+        <h3 class="product-title">PAKEJ 3</h3>
+        <img src="RM2799.jpg" alt="Product 3">
+        <h2 class="product-price">RM2799</h2>
+        <div class="product-details">
+            <ul>
+                <li>1. AMD RYZEN 5 5500 6C/12T</li>
+                <li>2. MSI A520M-A PRO</li>
+                <li>3. MSI RTX 4060 VENTUS 2X BLACK 8GB</li>
+                <li>4. 16GB PNY XLR8 EPIC-X DDR4 3200Mhz (16GBX1)</li>
+                <li>5. 500GB M.2 2280 NVMe Gen3x4</li>
+                <li>6. 1ST PLAYER T3 M-ATX (4xF2 ARGB FAN+HUB)</li>
+                <li>7. 1ST PLAYER DK PREMIUM 600W 80 PLUS BRONZE</li>
+                <li>8. FREE : USB WIRELESS ADAPTER 2.4G</li>
+            </ul>
+        </div>
+        <a class="whatsapp-link" href="https://wa.me/175298421?text=Saya%20tertarik%20dengan%20Pakej%203">Pakej RM2799 WhatsApp</a>
+    </div>
+
+    <!-- Continue for Product 4 to 7 in the same format -->
+    <!-- Product 4 -->
+    <div class="product">
+        <h3 class="product-title">PAKEJ 4</h3>
+        <img src="RM3099.jpg" alt="Product 4">
+        <h2 class="product-price">RM3099</h2>
+        <div class="product-details">
+            <ul>
+                <li>1. AMD RYZEN 5 5600 6C/12T</li>
+                <li>2. MSI B550M-A PRO</li>
+                <li>3. MSI RTX 4060 VENTUS 2X BLACK 8GB</li>
+                <li>4. 16GB PNY XLR8 EPIC-X DDR4 3200Mhz (16GBX1)</li>
+                <li>5. 500GB MSI SPATIUM M450 M.2 2280 NVMe</li>
+                <li>6. 1ST PLAYER T3 M-ATX (4xF2 ARGB FAN+HUB)</li>
+                <li>7. 1ST PLAYER DK PREMIUM 600W 80 PLUS BRONZE</li>
+                <li>8. FREE : USB WIRELESS ADAPTER 2.4G</li>
+            </ul>
+        </div>
+        <a class="whatsapp-link" href="https://wa.me/175298421?text=Saya%20tertarik%20dengan%20Pakej%204">Pakej RM3099 WhatsApp</a>
+    </div>
+
+    <!-- Product 5 -->
+    <div class="product">
+        <h3 class="product-title">PAKEJ 5</h3>
+        <img src="RM3299.jpg" alt="Product 5">
+        <h2 class="product-price">RM3299</h2>
+        <div class="product-details">
+            <ul>
+                <li>1. AMD RYZEN 5 5600 6C/12T</li>
+                <li>2. MSI B550M-A PRO VDH WIFI</li>
+                <li>3. MSI RTX 4060 VENTUS 2X BLACK 8GB</li>
+                <li>4. 16GB PNY XLR8 EPIC-X DDR4 3200Mhz (8GBX2)</li>
+                <li>5. 500GB MSI SPATIUM M450 M.2 2280 NVMe</li>
+                <li>6. MSI MAG FORGE M100R MICRO ATX TOWER CASE(4xARGB FAN+HUB)</li>
+                <li>7. MSI MAG A650BN 650W 80 PLUS BRONZE</li>
+            </ul>
+        </div>
+        <a class="whatsapp-link" href="https://wa.me/175298421?text=Saya%20tertarik%20dengan%20Pakej%205">Pakej RM3299 WhatsApp</a>
+    </div>
+
+    <!-- Product 6 -->
+    <div class="product">
+        <h3 class="product-title">PAKEJ 6</h3>
+        <img src="RM3799.jpg" alt="Product 6">
+        <h2 class="product-price">RM3799</h2>
+        <div class="product-details">
+            <ul>
+                <li>1. AMD RYZEN 7 5700X 8C/16T</li>
+                <li>2. MSI B550M MORTAR MAX WIFI</li>
+                <li>3. MSI RTX 4060 VENTUS 2X BLACK 8GB</li>
+                <li>4. 16GB PNY XLR8 EPIC-X DDR4 3200Mhz (8GBX2)</li>
+                <li>5. 1TB MSI SPATIUM M460 M.2 2280 NVMe</li>
+                <li>6. MSI MAG FORGE M100R MICRO ATX TOWER CASE(4xARGB FAN+HUB)</li>
+                <li>7. MSI MAG A650BN 650W 80 PLUS BRONZE</li>
+            </ul>
+        </div>
+        <a class="whatsapp-link" href="https://wa.me/175298421?text=Saya%20tertarik%20dengan%20Pakej%206">Pakej RM3799 WhatsApp</a>
+    </div>
+
+    <!-- Product 7 -->
+    <div class="product">
+        <h3 class="product-title">PAKEJ 7</h3>
+        <img src="IMG20240130000903.jpg" alt="Product 7">
+        <h2 class="product-price">Custom Sendiri</h2>
+        <div class="product-details">
+            <ul>
+                <li>1.Barang Apa Spec Apa, Boleh Custom</li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <a class="whatsapp-link" href="https://wa.me/175298421?text=Saya%20tertarik%20dengan%20Pakej%207">Pakej RM4099 WhatsApp</a>
+    </div>
+</div>
 
 </body>
 </html>
