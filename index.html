@@ -4,91 +4,139 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FPS FIKTECH PC SOLUTION</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
+      
+      <meta property="og:title" content="FPS FIKTECH PC SOLUTION">
+    <meta property="og:description" content="1. Untuk Penghantaran COD RM50
+2. Setiap Pesanan Mengambil Masa 7 Hingga 10 Hari Waktu Bekerja..">
+    <meta property="og:image" content="https://pikachu566.github.io/Official_Website-FPS-FIKTECH-PC-SOLUTION/gambarlink.png">
+    <meta property="og:url" content="https://pikachu566.github.io/Official_Website-FPS-FIKTECH-PC-SOLUTION/">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FPS FIKTECH PC SOLUTION">
+    <meta name="twitter:description" content="1. Untuk Penghantaran COD RM50
+2. Setiap Pesanan Mengambil Masa 7 Hingga 10 Hari Waktu Bekerja.">
+    <meta name="twitter:image" content="https://pikachu566.github.io/Official_Website-FPS-FIKTECH-PC-SOLUTION/gambarlink.png">
+  
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+    }
+
+    header {
+        background-color: #FF0000; /* Tukar warna hijau ke merah */
+        padding: 20px;
+        text-align: center;
+        color: white;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        position: relative;
+    }
+    header img {
+        width: 80px; /* Sesuaikan saiz logo */
+        position: absolute;
+        top: 10px;
+        left: 10px; /* Letak logo di sudut kiri */
+    }
+    header h1 {
+        margin: 0;
+        font-size: 3em;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    .product {
+        background-color: white;
+        width: 100%;
+        max-width: 400px;
+        margin: 20px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    .product img {
+        width: 100%;
+        height: auto;
+        max-width: 300px;
+        border-radius: 10px;
+    }
+    .product-title, .product-price {
+        margin: 15px 0;
+        font-size: 1.5em;
+    }
+    .product-price {
+        font-size: 2em;
+        color: #333;
+    }
+    .product-details ul {
+        list-style-type: none;
+        padding: 0;
+        color: #777;
+        text-align: left;
+    }
+    .product-details ul li {
+        margin: 5px 0;
+        font-size: 1em;
+    }
+    .whatsapp-link {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 12px 20px;
+        background-color: #25d366;
+        color: white;
+        text-decoration: none;
+        font-size: 1.1em;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+    .whatsapp-link:hover {
+        background-color: #1ebe57;
+    }
+
+    .info-list {
+        text-align: center;
+        margin: 0 auto;
+        max-width: 90%; /* Pastikan ia tidak terlalu lebar pada mobile */
+        padding: 20px;
+    }
+
+    .info-list li {
+        margin: 10px 0;
+        font-size: 1.2em;
+    }
+
+    .info-list h2, 
+    .info-list h3 {
+        margin: 15px 0;
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    @media (min-width: 768px) {
+        .info-list {
+            max-width: 70%; /* Lebih besar untuk desktop */
+        }
+        
+        .info-list h2 {
+            font-size: 2em; /* Lebih besar pada desktop */
         }
 
-        header {
-            background-color: #FF0000; /* Tukar warna hijau ke merah */
-            padding: 20px;
-            text-align: center;
-            color: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-            position: relative;
+        .info-list h3 {
+            font-size: 1.8em;
         }
-        header img {
-            width: 80px; /* Sesuaikan saiz logo */
-            position: absolute;
-            top: 10px;
-            left: 10px; /* Letak logo di sudut kiri */
-        }
-        header h1 {
-            margin: 0;
-            font-size: 3em;
-        }
+    }
+</style>
 
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: flex-start;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .product {
-            background-color: white;
-            width: 100%;
-            max-width: 400px;
-            margin: 20px;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        .product img {
-            width: 100%;
-            height: auto;
-            max-width: 300px;
-            border-radius: 10px;
-        }
-        .product-title, .product-price {
-            margin: 15px 0;
-            font-size: 1.5em;
-        }
-        .product-price {
-            font-size: 2em;
-            color: #333;
-        }
-        .product-details ul {
-            list-style-type: none;
-            padding: 0;
-            color: #777;
-            text-align: left;
-        }
-        .product-details ul li {
-            margin: 5px 0;
-            font-size: 1em;
-        }
-        .whatsapp-link {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 12px 20px;
-            background-color: #25d366;
-            color: white;
-            text-decoration: none;
-            font-size: 1.1em;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-        .whatsapp-link:hover {
-            background-color: #1ebe57;
-        }
-    </style>
 </head>
 <body>
 
@@ -99,17 +147,17 @@
 </header>
 
     <ul class="info-list">
-        <li>1. Untuk Penghantaran COD RM50</li>
-        <li>2. Setiap Pesanan Mengambil Masa 7 Hingga 10 Hari Waktu Bekerja.</li>
-        <li>3. Lokasi Berhampiran Ban Pecah Tanjung Piandang, Perak, Malaysia.</li>
-        <li>4. 14/12/2024 UPDATE</li>
-        <h2>UNTUK FULLSET</h2>
-		<h3>MONITOR : VIEWSONIC VA2432-H</h3>
-		<h3>MONITOR : VEWSONIC VA2732-H</h3>
-		<h3>KEYBOARD : LOGITECH MK120/MOUSE COMBO</h3>
-		<h3>HEADSET : RAZER BLACKSHARK V2 X WHITE</h3>
-		<h3>TAMBAH RM650 27 INCH / FULLSET</h3>
-		<h3>TAMBAH RM550 24 INCH / FULLSET</h3>
+        <p>1. Untuk Penghantaran COD RM50</p>
+        <p>2. Setiap Pesanan Mengambil Masa 7 Hingga 10 Hari Waktu Bekerja.</p>
+        <p>3. Lokasi Berhampiran Ban Pecah Tanjung Piandang, Perak, Malaysia.</p>
+        <p>4. 14/12/2024 UPDATE</p>
+        <h4>UNTUK FULLSET</h4>
+		<h4>MONITOR : VIEWSONIC VA2432-H</h4>
+		<h4>MONITOR : VEWSONIC VA2732-H</h4>
+		<h4>KEYBOARD : LOGITECH MK120/MOUSE COMBO</h4>
+		<h4>HEADSET : RAZER BLACKSHARK V2 X WHITE</h4>
+		<h4>TAMBAH RM650 27 INCH / FULLSET</h4>
+		<h4>TAMBAH RM550 24 INCH / FULLSET</h4>
     </ul>
 
 <div class="container">
