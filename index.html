@@ -52,6 +52,24 @@
         <h1>Website Sedang Dibaik Pulih</h1>
         <div class="loading"></div>
         <p>Kami sedang melakukan penyelenggaraan untuk meningkatkan pengalaman anda. Harap bersabar dan kembali semula nanti.</p>
+        <p>Life Time: <span id="lifetime"></span></p> <!-- Website Maintenance -->
     </div>
+    <script>
+        function updateLifetime() {
+            const startDate = new Date("2025-02-01T00:00:00");
+            function refreshTime() {
+                const now = new Date();
+                const diff = now - startDate;
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+                document.getElementById("lifetime").innerText = `${days} hari, ${hours} jam, ${minutes} minit, ${seconds} saat`;
+            }
+            refreshTime();
+            setInterval(refreshTime, 1000);
+        }
+        document.addEventListener("DOMContentLoaded", updateLifetime);
+    </script>
 </body>
 </html>
