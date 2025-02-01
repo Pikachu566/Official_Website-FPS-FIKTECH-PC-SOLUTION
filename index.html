@@ -3,73 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Penyelenggaraan Website</title>
+    <title>FIKTECH PC SOLUTION</title>
+    
+    <meta property="og:title" content="FPS FIKTECH PC SOLUTION">
+    <meta property="og:description" content="1. Untuk Penghantaran COD RM50
+2. Setiap Pesanan Mengambil Masa 7 Hingga 10 Hari Waktu Bekerja..">
+    <meta property="og:image" content="https://pikachu566.github.io/Official_Website-FPS-FIKTECH-PC-SOLUTION/gambarlink.png">
+    <meta property="og:url" content="https://pikachu566.github.io/Official_Website-FPS-FIKTECH-PC-SOLUTION/">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FPS FIKTECH PC SOLUTION">
+    <meta name="twitter:description" content="1. Untuk Penghantaran COD RM50
+2. Setiap Pesanan Mengambil Masa 7 Hingga 10 Hari Waktu Bekerja.">
+    <meta name="twitter:image" content="https://pikachu566.github.io/Official_Website-FPS-FIKTECH-PC-SOLUTION/gambarlink.png">
+
     <style>
-        body {
-            background-color: black;
-            color: red;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .container {
-            max-width: 600px;
-            padding: 20px;
-            border: 2px solid red;
-            border-radius: 10px;
-            box-shadow: 0px 0px 15px red;
-        }
-        h1 {
-            font-size: 36px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        p {
-            font-size: 18px;
-            margin: 10px 0;
-        }
-        .loading {
-            width: 50px;
-            height: 50px;
-            border: 5px solid red;
-            border-top: 5px solid black;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin: 20px auto;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
+        body { font-family: Arial, sans-serif; background-color: #121212; color: white; text-align: center; }
+        header { padding: 20px; background: #222; }
+        .info-list, .fullset-box { background: #333; padding: 20px; margin: 20px auto; width: 80%; border-radius: 10px; }
+        .container { display: flex; flex-wrap: wrap; justify-content: center; }
+        .product { background: #444; padding: 20px; margin: 10px; width: 300px; border-radius: 10px; }
+        .product img { width: 100%; border-radius: 10px; }
+        .whatsapp-link { display: block; padding: 10px; background: green; color: white; text-decoration: none; margin-top: 10px; border-radius: 5px; }
+        .whatsapp-link:hover { background: #0f0; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Website Sedang Dibaik Pulih</h1>
-        <div class="loading"></div>
-        <p>Kami sedang melakukan penyelenggaraan untuk meningkatkan pengalaman anda. Harap bersabar dan kembali semula nanti.</p>
-        <p>Life Time: <span id="lifetime"></span></p> <!-- Website Maintenance -->
-    </div>
-    <script>
-        function updateLifetime() {
-            const startDate = new Date("2025-02-01T00:00:00");
-            function refreshTime() {
-                const now = new Date();
-                const diff = now - startDate;
-                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-                document.getElementById("lifetime").innerText = `${days} hari, ${hours} jam, ${minutes} minit, ${seconds} saat`;
-            }
-            refreshTime();
-            setInterval(refreshTime, 1000);
-        }
-        document.addEventListener("DOMContentLoaded", updateLifetime);
-    </script>
+
+<header>
+    <img src="FPS.jpg" alt="Logo FPS" width="100">
+    <h1>FIKTECH PC SOLUTION</h1>
+</header>
+
+<div class="info-list">
+    <p>1. Untuk Penghantaran COD/POSTAGE RM50</p>
+    <p>2. Setiap Pesanan Mengambil Masa 3 Hingga 7 Hari Waktu Bekerja.</p>
+    <p>3. Lokasi: Ban Pecah, Tanjung Piandang, Perak.</p>
+    <p>4. Kemaskini: 1/2/2025</p>
+	<p>5. FREE : MERCUSYS MW150US N150 Wireless Nano USB Adapter, Nano Size, USB 2.0 </p>
+</div>
+
+<div class="fullset-box">
+    <h2>UNTUK FULLSET</h2>
+    <p>MONITOR : VIEWSONIC VA2432-H</p>
+    <p>MONITOR : VIEWSONIC VA2732-H</p>
+    <p>KEYBOARD : LOGITECH MK120/MOUSE COMBO</p>
+    <p>HEADSET : RAZER BLACKSHARK V2 X WHITE</p>
+    <p>TAMBAH RM650 27 INCH / FULLSET</p>
+    <p>TAMBAH RM550 24 INCH / FULLSET</p>
+</div>
+
+<div class="container" id="product-container"></div>
+
+<script>
+const pakejList = [
+    { title: "PAKEJ 1", img: "RM949.jpg", price: "RM949", specs: ["CPU : RYZEN 3 3200G", "MOBO : GIGABYE A520M-K V2", "GPU : RADEON GRAPHIC 2GB", "RAM : 8GB PNY 3200MHz VALUE(8x1)", "SSD : PNY 500GB NVMe M.2" , "PSU : E380 380W PSU  (1 YEAR WARRANTY) BLACK " , "CASE: SLEVCASE SPORTLESS M-ATX "], wa: "175298421" },
+    { title: "PAKEJ 2", img: "RM1376.jpg", price: "RM1349", specs: ["CPU : RYZEN 5 5600G", "MOBO : GIGABYE A520M-K V2", "GPU : RADEON GRAPHIC 2GB", "RAM : 8GB PNY 3200MHz value(8x1)", "SSD : PNY 500GB NVMe M.2" , "PSU : 1ST PLAYER BLACK SIR 500W PRO 80 PLUS WHITE 3 YEARS WARRANTY" , "CASE : 1ST PLAYER BS-2 M-ATX (3x F2 ARGB FAN + HUB) BLACK "], wa: "175298421" },
+	{ title: "PAKEJ 3", img: "RM2199.jpg", price: "RM1990", specs: ["CPU : RYZEN 5 5500", "MOBO : MSI A520M-A PRO", "GPU : MSI RTX 3050 6GB", "RAM : 16GB PNY XLR8 3200MHz(8x1)", "SSD : PNY 500GB NVMe M.2" , "PSU : 1ST PLAYER BLACK SIR 500W PRO 80 PLUS WHITE  3 YEARS WARRANTY" , "CASE : 1ST PLAYER BS-2 M-ATX (3x F2 ARGB FAN + HUB) BLACK "], wa: "175298421" },
+	{ title: "PAKEJ 4", img: "RM2799.jpg", price: "RM2617", specs: ["CPU : RYZEN 5 5500", "MOBO : MSI A520M-A PRO", "GPU : MSI RTX 4060 VENTUS 2X BLACK OC 8GB", "RAM : 16GB PNY XLR8 3200MHz(8x1)", "SSD : PNY 500GB NVMe M.2" , "PSU : 1ST PLAYER DK PREMIUM 600W 80 PLUS BRONZE NON MODULAR" , "CASE : 1ST PLAYER T3 M-ATX (4x F2 ARGB FAN + HUB) BLACK  "], wa: "175298421" },
+    { title: "PAKEJ 5", img: "RM3099.jpg", price: "RM2849", specs: ["CPU : RYZEN 5 5600", "MOBO : MSI B550M-A PRO", "GPU : MSI RTX 4060 VENTUS 2X BLACK OC 8GB", "RAM : 16GB PNY XLR8 3200MHz(8x1)", "SSD : 500GB MSI SPATIUM M450 NVMe M.2" , "PSU : 1ST PLAYER DK PREMIUM 600W 80 PLUS BRONZE NON MODULAR" , "CASE : 1ST PLAYER T3 M-ATX (4x F2 ARGB FAN + HUB) BLACK  "], wa: "175298421" },
+    { title: "PAKEJ 6", img: "RM3299.jpg", price: "RM3097", specs: ["CPU : RYZEN 5 5600", "MOBO : MSI B550M-A PRO VDH WIFI", "GPU : MSI RTX 4060 VENTUS 2X BLACK OC 8GB", "RAM : 16GB PNY XLR8 3200MHz(8x2)", "SSD : 500GB MSI SPATIUM M450 NVMe M.2" , "PSU : MSI MAG A650BN 650W 80 PLUS BRONZE NON MODULAR" , "CASE : MSI MAG FORGE M100R MICRO ATX TOWER CASING (BLACK) (4x ARGB FAN+HUB)"], wa: "175298421" },
+    { title: "PAKEJ 7", img: "RM3799.jpg", price: "RM3479", specs: ["CPU : RYZEN 7 5700X", "MOBO : MSI B550M MORTAR MAX WIFI", "GPU : MSI RTX 4060 VENTUS 2X BLACK OC 8GB", "RAM : 16GB PNY XLR8 3200MHz(8x2)", "SSD : 1TB MSI SPATIUM M460 NVMe M.2" , "PSU : MSI MAG A650BN 650W 80 PLUS BRONZE NON MODULAR" , "CASE : MSI MAG FORGE M100R MICRO ATX TOWER CASING (BLACK) (4x ARGB FAN+HUB)"], wa: "175298421" },
+    { title: "Nak Custom?", img: "custom.jpg", price: "RM500-RM3500", specs: ["PROCCESSOR ?", "MOTHERBOARD?", "GRAPHIC CARD?", "RAM?", "STORAGE?" , "POWER SUPPLY?" , "AIO?" , "CASING?"], wa: "175298421" }
+];
+
+const container = document.getElementById("product-container");
+pakejList.forEach(pakej => {
+    const productDiv = document.createElement("div");
+    productDiv.classList.add("product");
+    productDiv.innerHTML = `
+        <h3>${pakej.title}</h3>
+        <img src="${pakej.img}" alt="${pakej.title}">
+        <h2>${pakej.price}</h2>
+        <ul>${pakej.specs.map(spec => `<li>${spec}</li>`).join('')}</ul>
+        <a class="whatsapp-link" href="https://wa.me/${pakej.wa}?text=Saya%20berminat%20dengan%20${pakej.title}">Hubungi WhatsApp</a>
+    `;
+    container.appendChild(productDiv);
+});
+</script>
+
 </body>
 </html>
