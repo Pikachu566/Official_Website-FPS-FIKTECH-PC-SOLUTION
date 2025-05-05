@@ -18,19 +18,118 @@
 		2. Setiap Pesanan Mengambil Masa 3 Hari Waktu Bekerja.">
     <meta name="twitter:image" content="https://raw.githubusercontent.com/Pikachu566/Official_Website-FPS-FIKTECH-PC-SOLUTION/main/gambarlink2.jpg">
 
-    <style>
-        body { font-family: Arial, sans-serif; background-color: #121212; color: white; text-align: center; margin: 0; padding-bottom: 60px; }
-        header { padding: 1px; background: #222; position: relative; }
-        .info-list, .fullset-box { background: #333; padding: 20px; margin: 20px auto; width: 80%; border-radius: 10px; }
-        .container { display: flex; flex-wrap: wrap; justify-content: center; }
-        .product { background: #444; padding: 20px; margin: 10px; width: 300px; border-radius: 10px; }
-        .product img { width: 100%; border-radius: 10px; }
-        .whatsapp-link { display: block; padding: 10px; background: green; color: white; text-decoration: none; margin-top: 10px; border-radius: 5px; }
-        .whatsapp-link:hover { background: #0f0; }
-        footer { background: #222; padding: 5px; color: #aaa; font-size: 14px; position: fixed; bottom: 0; width: 100%; }
-    </style>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #121212;
+        color: white;
+        text-align: center;
+        margin: 0;
+        padding-bottom: 60px;
+        padding-top: 70px; /* bagi ruang untuk audioBar atas */
+    }
+
+    header {
+        padding: 1px;
+        background: #222;
+        position: relative;
+    }
+
+    .info-list, .fullset-box {
+        background: #333;
+        padding: 20px;
+        margin: 20px auto;
+        width: 80%;
+        border-radius: 10px;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .product {
+        background: #444;
+        padding: 20px;
+        margin: 10px;
+        width: 300px;
+        border-radius: 10px;
+    }
+
+    .product img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .whatsapp-link {
+        display: block;
+        padding: 10px;
+        background: green;
+        color: white;
+        text-decoration: none;
+        margin-top: 10px;
+        border-radius: 5px;
+    }
+
+    .whatsapp-link:hover {
+        background: #0f0;
+    }
+
+    footer {
+        background: #222;
+        padding: 5px;
+        color: #aaa;
+        font-size: 14px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    /* Tambahan untuk audio player */
+#audioBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1a1a1a;
+    padding: 10px;
+    text-align: center;
+    z-index: 9999;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+#audioBar button {
+    background-color: #292929;
+    color: #fff;
+    border: none;
+    padding: 10px 14px;
+    margin: 0 6px;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: background 0.3s, transform 0.2s;
+}
+
+#audioBar button:hover {
+    background-color: #444;
+    transform: scale(1.1);
+}
+
+</style>
+
 </head>
 <body>
+
+<div id="audioBar">
+    <audio id="audioNotification">
+        <source src="sound.mp3" type="audio/mpeg">
+    </audio>
+    <button onclick="playAudio()" title="Play Music">Play Music🎵</button>
+    <button onclick="pauseAudio()" title="Pause Music">Pause Music⏸️</button>
+</div>
+
 
 <header>
     <img src="FPS.jpg" alt="Logo FPS" width="100">
@@ -172,6 +271,14 @@ const pakejList = [
 	],
 	wa: "175298421" },
 ];
+
+        function playAudio() {
+            document.getElementById("audioNotification").play();
+        }
+
+        function pauseAudio() {
+            document.getElementById("audioNotification").pause();
+        }
 
 const container = document.getElementById("product-container");
 pakejList.forEach(pakej => {
